@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pdphillips.omagato",
+  "name": "Omagato",
+  "version": "0.1.0",
+  "author": "pdphillips",
+  "license": "MIT",
+  "description": "Bar widget and menu for the Omagato Stream Deck daemon.",
+  "kinds": ["bar-widget", "menu"],
+  "keepLoaded": true,
+  "entryPoints": {
+    "barWidget": "BarWidget.qml",
+    "menu": "Menu.qml"
+  },
+  "barWidget": {
+    "displayName": "Omagato",
+    "description": "Stream Deck status. Click opens the Omagato menu.",
+    "category": "Input",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
