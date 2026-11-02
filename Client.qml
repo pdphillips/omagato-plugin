@@ -85,7 +85,8 @@ QtObject {
     root.request("reconnect", {}, function() { root.refresh() })
   }
 
-  Socket {
+  // QtObject has no default property in Quickshell 0.3.2, so these cannot be children.
+  property Socket connection: Socket {
     id: sock
     path: root.socketPath()
     connected: true
@@ -100,7 +101,7 @@ QtObject {
     }
   }
 
-  Timer {
+  property Timer poll: Timer {
     interval: 2000
     repeat: true
     running: sock.connected
