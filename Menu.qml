@@ -1,7 +1,7 @@
 import QtQuick
 import Quickshell
 import Quickshell.Io
-import qs.Commons
+import qs.Commons as Commons
 
 Item {
   id: root
@@ -46,8 +46,8 @@ Item {
       width: 300
       height: column.implicitHeight + 28
       radius: 14
-      color: Color.popups.background
-      border.color: Color.muted
+      color: Commons.Color.popups.background
+      border.color: Commons.Color.muted
       border.width: 1
 
       MouseArea { anchors.fill: parent }
@@ -63,9 +63,9 @@ Item {
         Text {
           width: parent.width
           wrapMode: Text.WordWrap
-          color: Color.muted
+          color: Commons.Color.muted
           text: client.summary
-          font.family: Style.font.menuFamily
+          font.family: Commons.Style.font.menuFamily
         }
 
         ActionRow {
@@ -103,15 +103,15 @@ Item {
     width: parent ? parent.width : 0
     height: 36
     radius: 8
-    color: Color.background
+    color: Commons.Color.background
     border.width: 1
-    border.color: hover.containsMouse ? Color.accent : Color.muted
+    border.color: hover.containsMouse ? Commons.Color.accent : Commons.Color.muted
 
     Text {
       anchors.centerIn: parent
       text: row.label
-      color: Color.foreground
-      font.family: Style.font.menuFamily
+      color: Commons.Color.foreground
+      font.family: Commons.Style.font.menuFamily
     }
 
     MouseArea {

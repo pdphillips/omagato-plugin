@@ -1,6 +1,6 @@
 import QtQuick
 import Quickshell.Io
-import qs.Commons
+import qs.Commons as Commons
 import qs.Ui
 
 BarWidget {
@@ -31,7 +31,7 @@ BarWidget {
       height: 8
       radius: 4
       anchors.verticalCenter: parent.verticalCenter
-      color: client.online ? Color.accent : Color.muted
+      color: client.online ? Commons.Color.accent : Commons.Color.muted
     }
 
     WidgetButton {

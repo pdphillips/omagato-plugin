@@ -2,7 +2,11 @@
 
 Omarchy shell bar widget and menu for [Omagato](https://github.com/pdphillips/omagato). This repo is `manifest.json` and QML only. It talks to the daemon on `$XDG_RUNTIME_DIR/omagato.sock` and does not open HID.
 
-Colors come from the shell theme (`Color`, `Style`), not fixed hex values.
+Colors come from the shell theme (`Commons.Color`, `Commons.Style`), not fixed hex values.
+
+## Compatibility
+
+Omarchy 4.0.6 and Quickshell 0.3.2 (revision `2b4501a282689792b62e94f3fb30d8f512324fe6`, the build Omarchy ships). That stack uses Qt 6.12, whose `QtQuick` module has its own `Color` type, so theme colors are read as `Commons.Color`.
 
 ## Install
 
